@@ -1,0 +1,12 @@
+{% extends 'app_general/components/base.html' %}
+{% block site_title %}{{ food.title }} || {% endblock %}
+{% block content %}
+    {% if food is not None %}
+         <div>
+        <h3>{{ food.title }} </h3>
+        <p>{{ food.price|floatformat:'g' }}</p>
+        </div>
+    {% else %}
+        <p>ไม่พบข้อมูล</p>
+    {% endif%}
+{% endblock %}
